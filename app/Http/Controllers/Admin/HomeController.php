@@ -20,7 +20,7 @@ class HomeController
     $query->whereName('Cerrado');
     })->count();
 
-    if(auth()->user()->isAdmin()){
+    if(auth()->user()){
         $comments = Comment::all();
     }else{
         $comments = Comment::where('user_id',auth()->id() )->get();
