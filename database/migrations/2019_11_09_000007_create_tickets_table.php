@@ -19,7 +19,7 @@ class CreateTicketsTable extends Migration
 
             $table->string('author_phone')->unique()->nullable();
 
-            $table->string('author_email')->nullable();
+            $table->string('author_email')->unique()->nullable();
 
             $table->timestamps();
 

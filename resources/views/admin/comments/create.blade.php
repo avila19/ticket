@@ -26,14 +26,14 @@
 
             <div class="form-group {{ $errors->has('user_id') ? 'has-error' : '' }}">
                 <label for="user">Técnico/Ingeniero</label>
-                <select name="assigned_to_user_id" id="assigned_to_user" class="form-control select2">
-                    @foreach($assigned_to_users as $id => $assigned_to_user)
-                        <option value="{{ $id }}" {{ (isset($ticket) && $ticket->assigned_to_user ? $ticket->assigned_to_user->id : old('assigned_to_user_id')) == $id ? 'selected' : '' }}>{{ $assigned_to_user }}</option>
+                <select name="user_id" id="user" class="form-control select2">
+                    @foreach($users as $id => $user)
+                        <option value="{{ $id }}" {{ (isset($comment) && $comment->user ? $comment->user->id : old('user_id')) == $id ? 'selected' : '' }}>{{ $user }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('assigned_to_user_id'))
+                @if($errors->has('user_id'))
                     <em class="invalid-feedback">
-                        {{ $errors->first('assigned_to_user_id') }}
+                        {{ $errors->first('user_id') }}
                     </em>
                 @endif
             </div>

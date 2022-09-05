@@ -24,11 +24,11 @@ class CommentsController extends Controller
 
         $tickets = Ticket::where('status_id',2)->orderBy('id','DESC')->get();
 
-        $assigned_to_users = User::whereHas('roles', function($query) {
+        $users = User::whereHas('roles', function($query) {
             $query->whereId(2);
         })->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        return view('admin.comments.create', compact('tickets', 'assigned_to_users'));
+        return view('admin.comments.create', compact('tickets', 'users'));
     }
 
     public function store(StoreCommentRequest $request)
@@ -49,13 +49,13 @@ class CommentsController extends Controller
 
         $tickets = Ticket::where('status_id',2)->orderBy('id','DESC')->get();
 
-        $assigned_to_users = User::whereHas('roles', function($query) {
+        $users = User::whereHas('roles', function($query) {
             $query->whereId(2);
         })->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $comment->load('ticket', 'user');
 
-        return view('admin.comments.edit', compact('tickets', 'assigned_to_users', 'comment'));
+        return view('admin.comments.edit', compact('tickets', 'users', 'comment'));
     }
 
     public function update(UpdateCommentRequest $request, Comment $comment)
