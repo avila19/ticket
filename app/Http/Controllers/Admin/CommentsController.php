@@ -88,7 +88,8 @@ class CommentsController extends Controller
         return response(null, Response::HTTP_NO_CONTENT);
     }
 
-    public function importSoluciones(Request  $request){
+    public function importSoluciones(Request  $request)
+    {
         if( $file = $request->file('file')){
             Excel::import(new CommentsImport, $file);
             return back()->withStatus('Importacion de SOLUCIONES exitosa');
