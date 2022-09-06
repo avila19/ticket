@@ -96,10 +96,14 @@
                     </div>
                     <div class="card-body ">
                         <div class="table-responsive m-auto">
-                            <table class=" table table-bordered table-striped table-hover datatable datatable-Comment">
+                            <table
+                                class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-Comment dataTable_width_auto">
                                 <thead>
                                     <tr>
                                         <th width="1">
+                                        </th>
+                                        <th>
+                                            ID_Solicitud
                                         </th>
                                         <th>
                                             Solicitud
@@ -128,6 +132,9 @@
                                     @foreach ($comments as $key => $comment)
                                         <tr data-entry-id="{{ $comment->id }}">
                                             <td>
+                                            </td>
+                                            <td>
+                                                {{ $comment->ticket->id ?? '' }}
                                             </td>
                                             <td>
                                                 {{ $comment->ticket->title ?? '' }}

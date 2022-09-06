@@ -23,7 +23,7 @@
         </div>
         <div class=" card-body ">
             <div class="table-responsive m-auto ">
-                <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-Ticket">
+                <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-Ticket dataTable_width_auto">
                     <thead>
                     <tr>
                         <th width="1">
