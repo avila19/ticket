@@ -101,7 +101,7 @@
                 $('#filtersForm').submit();
             })
 
-            let dtButtons = ['copy','excel', 'pdf', 'print']
+            let dtButtons = ['copy','excel']
             @can('ticket_delete')
             let deleteButtonTrans = 'Borrar';
             let deleteButton = {

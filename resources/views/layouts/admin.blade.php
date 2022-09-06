@@ -28,7 +28,8 @@
 </head>
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show">
-    <header class="app-header navbar" style="background-image: url(https://st3.depositphotos.com/1748392/18584/v/1600/depositphotos_185844448-stock-illustration-technical-support-repair-assistance-seamless.jpg);background-size:auto ;background-repeat: no-repeat">
+    <header class="app-header navbar"
+        style="background-image: url(https://st3.depositphotos.com/1748392/18584/v/1600/depositphotos_185844448-stock-illustration-technical-support-repair-assistance-seamless.jpg);background-size:auto ;background-repeat: no-repeat">
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,16 +58,17 @@
                     </div>
                 </li>
             @endif
-                <li class="nav-item py-2 px-5">
-                    <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
-                        <i class="nav-icon fas fa-fw fa-sign-out-alt text-dark"></i>
-                        <strong class="text-dark"> Salir</strong>
-                    </a>
-                </li>
+            <li class="nav-item py-2 px-5">
+                <a href="#" class="nav-link"
+                    onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+                    <i class="nav-icon fas fa-fw fa-sign-out-alt text-dark"></i>
+                    <strong class="text-dark"> Salir</strong>
+                </a>
+            </li>
         </ul>
     </header>
 
-    <div class="app-body" >
+    <div class="app-body">
         @include('partials.menu')
         <main class="main" style="background-color: lightgray">
             <div style="padding-top: 20px" class="container-fluid">
@@ -152,7 +154,7 @@
                 },
                 order: [],
                 scrollX: true,
-                pageLength: 50,
+                pageLength: 20,
                 dom: 'lBfrtip<"actions">',
                 buttons: [{
                         extend: 'copy',
