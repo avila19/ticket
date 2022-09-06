@@ -97,13 +97,13 @@
                     <div class="card-body ">
                         <div class="table-responsive m-auto">
                             <table
-                                class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-Comment dataTable_width_auto">
+                                class=" table table-bordered table-striped table-hover datatable datatable-Comment dataTable_width_auto">
                                 <thead>
                                     <tr>
                                         <th width="1">
                                         </th>
                                         <th>
-                                            ID_Solicitud
+                                            ID
                                         </th>
                                         <th>
                                             Solicitud
@@ -118,7 +118,7 @@
                                             Fecha_Solución
                                         </th>
                                         <th>
-                                            Técnico/Ingeniero
+                                            Técnico/Ing
                                         </th>
                                         <th>
                                             Solución
@@ -134,10 +134,10 @@
                                             <td>
                                             </td>
                                             <td>
-                                                {{ $comment->ticket->id ?? '' }}
+                                                {{ $comment->id ?? '' }}
                                             </td>
                                             <td>
-                                                {{ $comment->ticket->title ?? '' }}
+                                                {{ $comment->ticket->id ?? '' }}-{{ $comment->ticket->title ?? '' }}
                                             </td>
                                             <td>
                                                 {{ $comment->ticket->author_name ?? '' }}
@@ -234,7 +234,7 @@
 
                         $.extend(true, $.fn.dataTable.defaults, {
                             order: [
-                                [4, 'DESC']
+                                [5, 'DESC']
                             ],
                             pageLength: 20,
                         });

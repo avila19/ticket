@@ -36,7 +36,7 @@ class CommentsController extends Controller
         $ticketid = $request-> ticket_id;
 
         if(Comment::where('ticket_id','=', $ticketid)->exists()){
-            return redirect()->back()->withErrors('Esta solicitud ya tiene solucion');
+            return redirect()->back()->withErrors('Esta solicitud ya tiene solución');
         }else{
             $comment = Comment::create($request->all());
             return redirect()->route('admin.home');

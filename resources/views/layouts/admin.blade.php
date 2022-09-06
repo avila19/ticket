@@ -161,7 +161,7 @@
                         className: 'btn-default',
                         text: copyButtonTrans,
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6]
+                            columns: [1, 2, 3, 4, 5, 6, 7]
                         }
                     },
 
@@ -170,7 +170,7 @@
                         className: 'btn-default',
                         text: excelButtonTrans,
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6]
+                            columns: [1, 2, 3, 4, 5, 6, 7]
                         }
                     },
                     {
@@ -178,7 +178,7 @@
                         className: 'btn-default',
                         text: pdfButtonTrans,
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6]
+                            columns: [1, 2, 3, 4, 5, 6, 7]
                         }
                     },
                     {
@@ -186,7 +186,7 @@
                         className: 'btn-default',
                         text: printButtonTrans,
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6]
+                            columns: [1, 2, 3, 4, 5, 6, 7]
                         }
                     },
 

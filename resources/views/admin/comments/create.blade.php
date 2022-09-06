@@ -39,9 +39,9 @@
                         </em>
                     @endif
                 </div>
-                <div class="form-group {{ $errors->has('comment_text') ? 'has-error' : '' }} col-md-6">
+                <div class="form-group {{ $errors->has('comment_text') ? 'has-error' : '' }} ">
                     <label for="comment_text">Solución*</label>
-                    <textarea id="comment_text" name="comment_text" class="form-control " required>{{ old('comment_text', isset($comment) ? $comment->comment_text : '') }}</textarea>
+                    <textarea id="comment_text" name="comment_text" class="form-control" required>{{ old('comment_text', isset($comment) ? $comment->comment_text : '') }}</textarea>
                     @if ($errors->has('comment_text'))
                         <em class="invalid-feedback">
                             {{ $errors->first('comment_text') }}
